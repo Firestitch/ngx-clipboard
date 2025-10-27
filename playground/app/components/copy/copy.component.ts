@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { FsClipboard } from '@firestitch/clipboard';
 import { MatButton } from '@angular/material/button';
@@ -12,10 +12,8 @@ import { MatButton } from '@angular/material/button';
     imports: [MatButton]
 })
 export class CopyComponent {
+  private _clipboard = inject(FsClipboard);
 
-  public constructor(
-    private _clipboard: FsClipboard,
-  ) {}
 
   public copy(): void {
     this._clipboard.copy('Copied Text!');

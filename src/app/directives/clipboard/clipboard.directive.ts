@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, inject } from '@angular/core';
 
 import { FsClipboard } from '../../services/clipboard-service';
 
@@ -8,6 +8,9 @@ import { FsClipboard } from '../../services/clipboard-service';
     standalone: true,
 })
 export class FsClipboardButtonDirective {
+  private _clipboard = inject(FsClipboard);
+  private _elRef = inject(ElementRef);
+
 
   @HostListener('click')
   public clicked() {
@@ -15,11 +18,6 @@ export class FsClipboardButtonDirective {
   }
 
   @Input() public content: string | (() => string) | HTMLElement;
-
-  public constructor(
-    private _clipboard: FsClipboard,
-    private _elRef: ElementRef,
-  ) {}
 
   public copy(): void {
     if(this.content === undefined) {

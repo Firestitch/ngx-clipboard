@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 
 import { FsMessage } from '@firestitch/message';
 
@@ -7,10 +7,8 @@ import { FsMessage } from '@firestitch/message';
   providedIn: 'root',
 })
 export class FsClipboard {
+  private _message = inject(FsMessage);
 
-  public constructor(
-    private _message: FsMessage,
-  ) {}
 
   public copyHtml(html: string, options: { showMessage?: boolean } = { showMessage: true}): Promise<void> {
     const el = document.createElement('div');
