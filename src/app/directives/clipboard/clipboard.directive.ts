@@ -4,7 +4,8 @@ import { FsClipboard } from '../../services/clipboard-service';
 
 
 @Directive({
-  selector: '[fs-clipboard],[fsClipboard]',
+    selector: '[fs-clipboard],[fsClipboard]',
+    standalone: true,
 })
 export class FsClipboardButtonDirective {
 

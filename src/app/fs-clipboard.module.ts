@@ -11,23 +11,20 @@ import { FsClipboardButtonDirective } from './directives/clipboard/clipboard.dir
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-
-    MatIconModule,
-    MatButtonModule,
-    MatTooltipModule,
-  ],
-  declarations: [
-    FsClipboardButtonComponent,
-    FsClipboardButtonDirective,
-    FsClipboardComponent,
-  ],
-  exports: [
-    FsClipboardButtonDirective,
-    FsClipboardButtonComponent,
-    FsClipboardComponent,
-  ],
+    imports: [
+        CommonModule,
+        MatIconModule,
+        MatButtonModule,
+        MatTooltipModule,
+        FsClipboardButtonComponent,
+        FsClipboardButtonDirective,
+        FsClipboardComponent,
+    ],
+    exports: [
+        FsClipboardButtonDirective,
+        FsClipboardButtonComponent,
+        FsClipboardComponent,
+    ],
 })
 export class FsClipboardModule {
   static forRoot(): ModuleWithProviders<FsClipboardModule> {

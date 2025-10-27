@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 
 import { FsClipboard } from '@firestitch/clipboard';
+import { MatButton } from '@angular/material/button';
 
 
 @Component({
-  selector: 'app-copy',
-  templateUrl: './copy.component.html',
-  styleUrls: ['./copy.component.scss']
+    selector: 'app-copy',
+    templateUrl: './copy.component.html',
+    styleUrls: ['./copy.component.scss'],
+    standalone: true,
+    imports: [MatButton]
 })
 export class CopyComponent {
 
