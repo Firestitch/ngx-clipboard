@@ -1,7 +1,7 @@
 {
   "name": "@firestitch/clipboard",
   "title": "Clipboard",
-  "version": "18.0.0",
+  "version": "18.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/Firestitch/ngx-clipboard"
