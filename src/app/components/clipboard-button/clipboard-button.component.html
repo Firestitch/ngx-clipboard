@@ -3,6 +3,10 @@
     fsClipboard
     [content]="content"
     mat-icon-button
-    [matTooltip]="tooltip">
-  <mat-icon>content_copy</mat-icon>
+    [matTooltip]="tooltip"
+    (copied)="copied()">
+  <span class="icons">
+    <mat-icon class="copy-icon" [class.hidden]="showCheck">content_copy</mat-icon>
+    <mat-icon class="check-icon" [class.visible]="showCheck">check</mat-icon>
+  </span>
 </button> 

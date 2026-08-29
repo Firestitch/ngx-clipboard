@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input, inject } from '@angular/core';
+import { Directive, ElementRef, EventEmitter, HostListener, Input, Output, inject } from '@angular/core';
 
 import { FsClipboard } from '../../services/clipboard-service';
 
@@ -19,6 +19,8 @@ export class FsClipboardButtonDirective {
 
   @Input() public content: string | (() => string) | HTMLElement;
 
+  @Output() public copied = new EventEmitter<void>();
+
   public copy(): void {
     if(this.content === undefined) {
       this.content = this._elRef.nativeElement;
@@ -33,6 +35,10 @@ export class FsClipboardButtonDirective {
        content = this.content;
     }
 
-    this._clipboard.copy(content);
+    this._clipboard.copy(content)
+      .then(() => {
+        this.copied.emit();
+      })
+      .catch(() => {});
   }
 }

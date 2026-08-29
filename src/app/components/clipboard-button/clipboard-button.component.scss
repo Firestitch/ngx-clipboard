@@ -1,0 +1,28 @@
+.icons {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  mat-icon {
+    transition: opacity 100ms ease-in-out;
+  }
+
+  .copy-icon {
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
+  .check-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    color: #4caf50;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+}

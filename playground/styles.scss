@@ -1,9 +1,15 @@
-@import '@firestitch/component-tools/assets/playground.scss';
+@use '@firestitch/component-tools/assets/playground.scss' as playground;
+@use '@firestitch/style/variables' with (
+  $palette: playground.$primary-palette
+);
+@use '@firestitch/style/styles' as fs-style;
+
 @import '@firestitch/message/styles';
 @import "@firestitch/drawer/styles";
 @import '../src/app/styles.scss';
 
-@include fs-drawer($mat-blue);
+@include fs-style.core();
+@include fs-drawer(playground.$mat-blue);
 
 small {
   font-size: 10px;
