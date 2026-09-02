@@ -30,3 +30,32 @@
     </fs-clipboard-text>
   </div>
 </div>
+
+<p>
+  When the text wraps over several lines the button follows the end of the last
+  line rather than hanging off the right edge of the first one.
+</p>
+<div class="paragraph">
+  <div class="label">Public sign-up link</div>
+  <fs-clipboard-text tooltip="Copy public sign-up link">
+    Publish this and anyone who opens it can join the program on this offer — no
+    invite needed. They sign up or sign in, get their own copy of these terms,
+    and land at pending until you approve them.
+  </fs-clipboard-text>
+</div>
+
+<div class="paragraph">
+  <div class="label">Wraps to exactly two lines</div>
+  <fs-clipboard-text>
+    A shorter paragraph that still runs past a single line so the button has to
+    find the end of the second one.
+  </fs-clipboard-text>
+</div>
+
+<div class="paragraph narrow">
+  <div class="label">Narrow column</div>
+  <fs-clipboard-text>
+    A long unbroken value like an API key still wraps sensibly and keeps the
+    button beside the last fragment of it.
+  </fs-clipboard-text>
+</div>

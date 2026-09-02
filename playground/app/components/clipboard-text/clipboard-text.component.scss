@@ -6,5 +6,18 @@
 }
 
 .paragraph {
-  max-width: 400px;
+  max-width: 460px;
+  margin-bottom: 24px;
+  // The tint shows where the container edge is, so an overhanging button would
+  // be obvious.
+  background-color: rgb(240, 247, 255);
+
+  &.narrow {
+    max-width: 220px;
+  }
+
+  .label {
+    font-size: 12px;
+    color: rgb(100, 116, 139);
+  }
 }

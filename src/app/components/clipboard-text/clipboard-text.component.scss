@@ -3,13 +3,30 @@
 // centring it against the text keeps the host exactly as tall as the text.
 :host {
   display: inline;
+}
+
+// The button hangs off an inline anchor that flows after the content instead of
+// off the host box. Once the text wraps, the host box spans the full container
+// width, so anchoring to it puts the button past the right edge of the *first*
+// line — which lands on top of the text. The anchor sits wherever the last word
+// ends, on whichever line that is.
+//
+// It reserves the button's full width so the last line makes room for it and
+// the button never overhangs the container. There is no whitespace between the
+// text and the anchor in the template, so there is no break opportunity between
+// them and the button cannot wrap onto a line of its own.
+.anchor {
   position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 1em;
+  vertical-align: baseline;
 }
 
 .button {
   position: absolute;
   top: 50%;
-  left: 100%;
+  left: 0;
   transform: translateY(-50%);
   line-height: 0;
 }
