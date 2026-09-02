@@ -1,0 +1,32 @@
+<p>
+  The copy button sits outside the flow, so a line with one is exactly as tall
+  as a line without one. Compare the spacing of the rows below.
+</p>
+<div class="rows">
+  <div>
+    Plain line with no copy button at all
+  </div>
+  <div>
+    <fs-clipboard-text>
+      ray&#64;firestitch.com
+    </fs-clipboard-text>
+  </div>
+  <div>
+    Another plain line with no copy button at all
+  </div>
+  <div>
+    <fs-clipboard-text [content]="content">
+      Content from Function
+    </fs-clipboard-text>
+  </div>
+  <div>
+    <fs-clipboard-text [content]="'Overridden string content'">
+      Content overridden by a string
+    </fs-clipboard-text>
+  </div>
+  <div>
+    <fs-clipboard-text tooltip="Copy the account number">
+      4111 1111 1111 1111
+    </fs-clipboard-text>
+  </div>
+</div>

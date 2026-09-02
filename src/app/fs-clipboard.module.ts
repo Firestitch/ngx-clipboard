@@ -7,6 +7,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { FsClipboardComponent } from './components/clipboard/clipboard.component';
 import { FsClipboardButtonComponent } from './components/clipboard-button/clipboard-button.component';
+import { FsClipboardTextComponent } from './components/clipboard-text/clipboard-text.component';
 import { FsClipboardButtonDirective } from './directives/clipboard/clipboard.directive';
 
 
@@ -19,11 +20,13 @@ import { FsClipboardButtonDirective } from './directives/clipboard/clipboard.dir
         FsClipboardButtonComponent,
         FsClipboardButtonDirective,
         FsClipboardComponent,
+        FsClipboardTextComponent,
     ],
     exports: [
         FsClipboardButtonDirective,
         FsClipboardButtonComponent,
         FsClipboardComponent,
+        FsClipboardTextComponent,
     ],
 })
 export class FsClipboardModule {

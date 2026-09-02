@@ -1,0 +1,15 @@
+// The icon button is ~40px tall, so leaving it in flow inflates the line box
+// and breaks the surrounding vertical rhythm. Taking it out of flow and
+// centring it against the text keeps the host exactly as tall as the text.
+:host {
+  display: inline;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  line-height: 0;
+}

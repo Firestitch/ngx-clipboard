@@ -1,0 +1,10 @@
+.rows {
+  > div {
+    // No vertical padding — any change in line height would show up here.
+    border-bottom: 1px solid rgb(165, 212, 255);
+  }
+}
+
+.paragraph {
+  max-width: 400px;
+}

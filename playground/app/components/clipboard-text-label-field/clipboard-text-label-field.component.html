@@ -1,0 +1,36 @@
+<p>
+  The fields with a copy button keep the same vertical rhythm as the ones
+  without, because the button never enters the line box.
+</p>
+
+<div class="fields">
+  <fs-label-field>
+    <fs-label>Name</fs-label>
+    John Smith
+  </fs-label-field>
+
+  <fs-label-field>
+    <fs-label>Email</fs-label>
+    <fs-clipboard-text>john.smith&#64;firestitch.com</fs-clipboard-text>
+  </fs-label-field>
+
+  <fs-label-field>
+    <fs-label>Phone</fs-label>
+    (555) 123-4567
+  </fs-label-field>
+
+  <fs-label-field>
+    <fs-label>API Key</fs-label>
+    <fs-clipboard-text
+        [content]="apiKey"
+        tooltip="Copy API key">
+      {{apiKey}}
+    </fs-clipboard-text>
+  </fs-label-field>
+
+  <fs-label-field>
+    <fs-label>Account Id</fs-label>
+    <fs-clipboard-text>acct_1M2n3B4v5C6x</fs-clipboard-text>
+    <fs-label-message>The id used when contacting support</fs-label-message>
+  </fs-label-field>
+</div>
